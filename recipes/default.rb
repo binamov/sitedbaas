@@ -13,7 +13,9 @@ template '/etc/apache2/httpd.conf' do
   mode '0644'
 end
 
-remote_file "#{Chef::Config[:file_cache_path]}/webfiles.tar.gz" do
+tarball = "#{Chef::Config[:file_cache_path]}/webfiles.tar.gz"
+
+remote_file tarball do
   owner 'root'
   group 'root'
   mode '0644'
@@ -25,7 +27,7 @@ template '/var/www/html/index.html' do
 end
 
 execute 'extract web files' do
-  command "tar -xvf #{Chef::Config[:file_cache_path]}/webfiles.tar.gz -C /var/www/html/"
+  command "tar -xvf #{tarball} -C /var/www/html/"
   not_if do
     ::File.exist?('/var/www/favicon.ico')
   end

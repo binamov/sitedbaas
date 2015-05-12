@@ -7,5 +7,5 @@ This cookbook has been tested on:
 * Ubuntu 14.04
 
 ## pre-requisites
-This cookbook has a dependency on
+This cookbook has a dependency on:
 * [httpdbaas](https://github.com/binamov/httpdbaas) cookbook
