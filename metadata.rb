@@ -1,6 +1,6 @@
 name 'sitedbaas'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'The Aristocrats'
+maintainer_email 'b@chef.io'
 license 'all_rights'
 description 'Installs/Configures sitedbaas'
 long_description 'Installs/Configures sitedbaas'
