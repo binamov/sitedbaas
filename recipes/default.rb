@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-include_recipe 'httpdbaas'
+include_recipe 'httpdbaas::install_apache'
 
 template '/etc/apache2/httpd.conf' do
   source 'sitedbaas.erb'
