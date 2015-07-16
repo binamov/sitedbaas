@@ -19,7 +19,7 @@ remote_file tarball do
   owner 'root'
   group 'root'
   mode '0644'
-  source 'https://s3.amazonaws.com/binamov-delivery/webfiles.tar.gz'
+  source node['sitedbaas']['artifact-url']
 end
 
 template '/var/www/html/index.html' do
